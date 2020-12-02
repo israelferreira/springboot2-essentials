@@ -2,13 +2,11 @@ package academy.devdojo.springboot2.repository;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import academy.devdojo.springboot2.domain.Anime;
 
-@Repository
-public interface AnimeRepository {
-
-	public List<Anime> listAll();
-
+public interface AnimeRepository extends JpaRepository<Anime, Long> {
+	
+	List<Anime> findByName(String name);
 }
