@@ -40,6 +40,7 @@ public class AnimeService {
 		animeRepository.delete(findByIdOrThrowBadRequestException(id));
 	}
 
+	@Transactional
 	public void replace(AnimePutRequestBody animePutRequestBody) {
 		Anime savedAnime = findByIdOrThrowBadRequestException(animePutRequestBody.getId());
 		Anime anime = Anime.builder()
