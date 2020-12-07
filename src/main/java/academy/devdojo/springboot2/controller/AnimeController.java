@@ -1,6 +1,5 @@
 package academy.devdojo.springboot2.controller;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -23,30 +22,24 @@ import academy.devdojo.springboot2.domain.Anime;
 import academy.devdojo.springboot2.requests.AnimePostRequestBody;
 import academy.devdojo.springboot2.requests.AnimePutRequestBody;
 import academy.devdojo.springboot2.service.AnimeService;
-import academy.devdojo.springboot2.util.DateUtil;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
 
 @RestController
 @RequestMapping("animes")
-@Log4j2
 @RequiredArgsConstructor
 public class AnimeController {
 
-	private final DateUtil dateUtil;
 	private final AnimeService animeService;
 	
 	@GetMapping
-	public ResponseEntity<Page<Anime>> listAllPageable(Pageable pageable) {
-		log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
-		return ResponseEntity.ok(animeService.listAllPageable(pageable));
+	public ResponseEntity<Page<Anime>> list(Pageable pageable) {
+		return ResponseEntity.ok(animeService.listAll(pageable));
 	}
 	
 	@GetMapping(path = "/all")
-	public ResponseEntity<List<Anime>> listAllNonPageable() {
-        log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
-        return ResponseEntity.ok(animeService.listAllNonPageable());
-    }
+	public ResponseEntity<List<Anime>> listAll() {
+		return ResponseEntity.ok(animeService.listAllNonPageable());
+	}
 	
 	@GetMapping(path = "/{id}")
 	public ResponseEntity<Anime> findById(@PathVariable Long id) {

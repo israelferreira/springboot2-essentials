@@ -20,7 +20,7 @@ public class AnimeService {
 
 	private final AnimeRepository animeRepository;
 	
-	public Page<Anime> listAllPageable(Pageable pageable) {
+	public Page<Anime> listAll(Pageable pageable) {
 		return animeRepository.findAll(pageable);
 	}
 	
