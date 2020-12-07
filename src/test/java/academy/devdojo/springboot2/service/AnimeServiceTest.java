@@ -57,7 +57,7 @@ class AnimeServiceTest {
 	}
 	
 	@Test
-    @DisplayName("listAll returns list of anime inside page object when successful")
+	@DisplayName("listAll returns list of anime inside page object when successful")
     void listAll_ReturnsListOfAnimesInsidePageObject_WhenSuccessful() {
 
         String expectedName = AnimeCreator.createValidAnime().getName();
@@ -71,7 +71,7 @@ class AnimeServiceTest {
 	}
 	
 	@Test
-    @DisplayName("listAllNonPageable returns list of anime when successful")
+	@DisplayName("listAllNonPageable returns list of anime when successful")
     void listAllNonPageable_ReturnsListOfAnimes_WhenSuccessful() {
 
         String expectedName = AnimeCreator.createValidAnime().getName();
@@ -84,8 +84,8 @@ class AnimeServiceTest {
         Assertions.assertThat(animes.get(0).getName()).isEqualTo(expectedName);
     }
 
-    @Test
-    @DisplayName("findByIdOrThrowBadRequestException returns anime when successful")
+	@Test
+	@DisplayName("findByIdOrThrowBadRequestException returns anime when successful")
     void findByIdOrThrowBadRequestException_ReturnsAnime_WhenSuccessful() {
 
         Long expectedId = AnimeCreator.createValidAnime().getId();

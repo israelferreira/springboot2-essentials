@@ -60,7 +60,7 @@ class AnimeControllerTest {
 	}
 	
 	@Test
-    @DisplayName("List returns list of anime inside page object when successful")
+	@DisplayName("List returns list of anime inside page object when successful")
     void list_ReturnsListOfAnimesInsidePageObject_WhenSuccessful() {
 
         String expectedName = AnimeCreator.createValidAnime().getName();
@@ -74,7 +74,7 @@ class AnimeControllerTest {
 	}
 	
 	@Test
-    @DisplayName("listAll returns list of anime when successful")
+	@DisplayName("listAll returns list of anime when successful")
     void listAll_ReturnsListOfAnimes_WhenSuccessful() {
 
         String expectedName = AnimeCreator.createValidAnime().getName();
