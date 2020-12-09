@@ -4,6 +4,8 @@
   <artifactId>springboot2-essentials</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
+  <name>springboot2-essentials</name>
+  <description>Curso de Spring Boot do DevDojo</description>
   
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -16,6 +18,7 @@
     <java.version>11</java.version>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
+    <springdoc-openapi-ui.version>1.5.1</springdoc-openapi-ui.version>
   </properties>
   
   <dependencies>
@@ -56,6 +59,11 @@
         </exclusion>
       </exclusions>
     </dependency>
+    
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
 
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -72,6 +80,24 @@
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
       <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-ui</artifactId>
+      <version>${springdoc-openapi-ui.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-data-rest</artifactId>
+      <version>${springdoc-openapi-ui.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-security</artifactId>
+      <version>${springdoc-openapi-ui.version}</version>
     </dependency>
     
   </dependencies>
