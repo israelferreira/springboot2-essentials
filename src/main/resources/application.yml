@@ -3,6 +3,8 @@ server:
     include-stacktrace: on_param
 
 spring:
+  application:
+    name: springboot2-essentials
   datasource:
     url: >
       jdbc:mysql://127.0.0.1:3306/anime?createDatabaseIfNotExist=false&useUnicode=true&characterEncoding=UTF-8&
@@ -18,3 +20,14 @@ logging:
     org:
       hibernate:
         SQL: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics, prometheus
+
+info:
+  app: Spring Boot 2 Essentials
+  github: https://github.com/israelferreira/springboot2-essentials
+
