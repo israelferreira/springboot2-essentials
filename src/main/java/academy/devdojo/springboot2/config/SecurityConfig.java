@@ -42,7 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		auth.inMemoryAuthentication()
 				.withUser("spring")
-				.password(passwordEncoder.encode("security"))
+				.password(passwordEncoder.encode("boot"))
 				.roles("USER", "ADMIN");
 		
 		auth.userDetailsService(devDojoUserDetailsService)
