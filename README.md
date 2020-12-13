@@ -89,16 +89,25 @@ Também é possível adicionar informações importantes na API para outras pess
 ---
 ### Monitoramento inteligente do sistema
 
-
 O projeto contém o [Prometheus](https://prometheus.io), um serviço de monitoramento de métricas para a aplicação.
-Ele é usado em conjunto com o [Grafana](https://grafana.com), uma ferramenta que permite a visualização de informações em Dashboards dos dados coletados pelo Prometheus.<br>Nesse exemplo irei usar o dashboard [**JVM (Micrometer)**](https://grafana.com/grafana/dashboards/4701), que foi criado para monitorar softwares desenvolvidos em Java.
-Acesse a URL `http://localhost:3000`, o usuário e senha por padrão é **admin** nos dois campos. Agora crie o data source do Prometheus ao clicar no ícone de engrenagem (**⚙**) na barra lateral e acessar a opção Data Sources. Configure do mesmo modo que está na imagem abaixo, e clique em Save & Test.<br><br>![enter image description here](https://user-images.githubusercontent.com/37079133/101959880-fab9e080-3be4-11eb-836a-05c61520fbeb.png)<br><br>Após isso acesse na barra lateral o botão **+** e selecione Import. Cole o link do dashboard JVM Micrometer ou use o ID (4701) e selecione o data source do Prometheus que já foi configurado.<br> Clique em Import.
-![jvm micrometer](https://user-images.githubusercontent.com/37079133/101959883-fb527700-3be4-11eb-810a-6b5005b6f998.PNG)<br>Agora é possível monitorar as informações sobre a aplicação, uso de processamento e memória RAM pela JVM sem muito esforço!
+
+Ele é usado em conjunto com o [Grafana](https://grafana.com), uma ferramenta que permite a visualização de informações em Dashboards dos dados coletados pelo Prometheus.<br>
+
+Nesse exemplo irei usar o dashboard [**JVM (Micrometer)**](https://grafana.com/grafana/dashboards/4701), que foi criado para monitorar softwares desenvolvidos em Java.
+
+Acesse a URL `http://localhost:3000`, o usuário e senha por padrão é **admin** nos dois campos. Agora crie o data source do Prometheus ao clicar no ícone de engrenagem (**⚙**) na barra lateral e acessar a opção Data Sources. Configure do mesmo modo que está na imagem abaixo, e clique em Save & Test.<br>
+
+![datasource](https://user-images.githubusercontent.com/37079133/101959880-fab9e080-3be4-11eb-836a-05c61520fbeb.png)<br>
+Após isso acesse na barra lateral o botão **+** e selecione Import. Cole o link do dashboard JVM Micrometer ou use o ID (4701) e selecione o data source do Prometheus que já foi configurado.<br>
+Clique em Import.
+
+![jvm micrometer](https://user-images.githubusercontent.com/37079133/101959883-fb527700-3be4-11eb-810a-6b5005b6f998.PNG)<br>
+
+Agora é possível monitorar as informações sobre a aplicação, uso de processamento e memória RAM pela JVM sem muito esforço!
 ![grafana](https://user-images.githubusercontent.com/37079133/101996031-a7f82b80-3cad-11eb-902f-aa2cf6676732.PNG)
+
 ---
 ### Como executar os testes de integração
-
-<br>
 
 1. Para executar os testes de integração da classe "AnimeControllerIT" é necessário ter o [Apache Maven](https://maven.apache.org/download.cgi) instalado no computador.
 
