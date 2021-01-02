@@ -39,7 +39,7 @@ Senha: boot<br>
 ---
 ### Softwares usados no desenvolvimento
 
-*  [OpenJDK 11 (LTS) - JVM Eclipse OpenJ9](https://adoptopenjdk.net)
+*  [OpenJDK 11 (LTS) - JVM HotSpot](https://adoptopenjdk.net)
 *  [Docker Desktop for Windows v3.0.0](https://www.docker.com/products/docker-desktop)
 *  [Eclipse IDE 2020-09 for Enterprise Java](https://www.eclipse.org/downloads/packages)
 *  [Project Lombok for Eclipse IDE v1.18.16](https://projectlombok.org/setup/eclipse)
@@ -119,8 +119,10 @@ Agora é possível monitorar as informações sobre a aplicação, uso de proces
 
 ![](https://user-images.githubusercontent.com/37079133/101987185-529e2900-3c71-11eb-9448-fa78cd95db8b.png)<br>
 ![Fim dos testes de integração](https://user-images.githubusercontent.com/37079133/101987188-53cf5600-3c71-11eb-82e7-0949d17a351e.PNG)<br>
+
 ---
 ### Autor
+
 Feito por Israel Ferreira. 👋🏽 Entre em contato!
-[![Gmail Badge](https://img.shields.io/badge/-israelferreira.github@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:israelferreira.github@gmail.com)](mailto:israelferreira.github@gmail.com)
+[![Email Badge](https://img.shields.io/badge/-israelferreira5@outlook.com-c14438?style=for-the-badge&color=blue&link=mailto:israelferreira5@outlook.com)](mailto:israelferreira5@outlook.com)
 
