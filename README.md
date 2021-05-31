@@ -2,7 +2,7 @@
 
 Esse repositório contém os arquivos do projeto **Spring Boot 2 Essentials**, desenvolvido pelo [William Suane (DevDojo)](https://github.com/devdojobr) e ensinado em um curso no [YouTube](https://www.youtube.com/c/DevDojoBrasil). Esse software tem a temática de Animes (desenhos animados japoneses).
 
-O projeto foi desenvolvido com a arquitetura REST usando o framework **Spring Boot** 2.4 no **Java** 11.<br>
+O projeto foi desenvolvido com a arquitetura REST usando o framework **Spring Boot** 2.5 no **Java** 16.<br>
 
 ### Funcionalidades do software  
 
@@ -39,10 +39,9 @@ Senha: boot<br>
 ---
 ### Softwares usados no desenvolvimento
 
-*  [OpenJDK 11 (LTS) - JVM HotSpot](https://adoptopenjdk.net)
+*  [OpenJDK 16 - JVM HotSpot](https://adoptopenjdk.net)
 *  [Docker Desktop for Windows v3.0.0](https://www.docker.com/products/docker-desktop)
 *  [Eclipse IDE 2020-09 for Enterprise Java](https://www.eclipse.org/downloads/packages)
-*  [Project Lombok for Eclipse IDE v1.18.16](https://projectlombok.org/setup/eclipse)
 *  [Postman 7.36](https://www.postman.com/downloads)
 *  [Apache Maven 3.6.3](https://maven.apache.org/download.cgi)
 ---
@@ -65,25 +64,23 @@ O projeto foi construído com a IDE Eclipse. Para executá-lo:
 ![mysql -u](https://user-images.githubusercontent.com/37079133/101959875-fa214a00-3be4-11eb-9f08-a470b04ef548.PNG)<br>
 ![create database](https://user-images.githubusercontent.com/37079133/101959876-fa214a00-3be4-11eb-88e2-0debd5ddb5c0.PNG)<br>
 
-6. O projeto usa o Lombok, que é uma biblioteca que reduz a quantidade de código-fonte escrito. Ele é capaz de criar construtores, getters/setters e etc para classes Java usando apenas anotações. Baixe o arquivo .jar do [Project Lombok](https://projectlombok.org/download) e instale na IDE Eclipse.
+
+6. Abra o Eclipse IDE
+
+7. Importe o projeto baixado: Vá em File > Open Projects from File System. Selecione a pasta pela opção "Directory" e pressione Finish.
+
+8. Espere o Maven baixar todas as dependências.
+
+9. Abra a classe java "Springboot2EssentialsApplication" e execute o método main.
+
+10. Para testar os recursos das URLs descritas acima, use alguma ferramenta de testes de API, como o **Postman**.
 
 
-7. Abra o Eclipse IDE
-
-8. Importe o projeto baixado: Vá em File > Open Projects from File System. Selecione a pasta pela opção "Directory" e pressione Finish.
-
-9. Espere o Maven baixar todas as dependências.
-
-10. Abra a classe java "Springboot2EssentialsApplication" e execute o método main.
-
-11. Para testar os recursos das URLs descritas acima, use alguma ferramenta de testes de API, como o **Postman**.
-
-
-12. Esse projeto contém a ferramenta **Swagger UI**, que serve para documentar automaticamente uma API REST.<br>Com o projeto em execução no container Apache, vá na URL `htto://localhost:8080/swagger-ui.html`, faça autenticação (usuário: spring, senha: boot). Nessa página é possível ver a API com os métodos (GET, POST, etc) e para que serve cada URL.<br>
+11. Esse projeto contém a ferramenta **Swagger UI**, que serve para documentar automaticamente uma API REST.<br>Com o projeto em execução no container Apache, vá na URL `htto://localhost:8080/swagger-ui.html`, faça autenticação (usuário: spring, senha: boot). Nessa página é possível ver a API com os métodos (GET, POST, etc) e para que serve cada URL.<br>
 ![swagger ui](https://user-images.githubusercontent.com/37079133/101959884-fbeb0d80-3be4-11eb-8724-5efedaacf1cf.PNG)<br>
 ![swagger ui](https://user-images.githubusercontent.com/37079133/101959885-fbeb0d80-3be4-11eb-9e30-c25a191a6976.PNG)<br>
 
-13. O projeto contém o Spring Actuator, que é uma ferramente que auxilia a visualização de dados como saúde e métricas da aplicação.<br>
+12. O projeto contém o Spring Actuator, que é uma ferramente que auxilia a visualização de dados como saúde e métricas da aplicação.<br>
 Também é possível adicionar informações importantes na API para outras pessoas lerem. Exemplo:<br>
 ![Actuator](https://user-images.githubusercontent.com/37079133/101959878-fab9e080-3be4-11eb-929c-56d8aed10848.PNG)<br>
 ---

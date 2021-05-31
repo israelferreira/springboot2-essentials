@@ -1,7 +1,13 @@
 package academy.devdojo.springboot2.integration;
 
-import java.util.List;
-
+import academy.devdojo.springboot2.domain.Anime;
+import academy.devdojo.springboot2.domain.DevDojoUser;
+import academy.devdojo.springboot2.repository.AnimeRepository;
+import academy.devdojo.springboot2.repository.DevDojoUserRepository;
+import academy.devdojo.springboot2.requests.AnimePostRequestBody;
+import academy.devdojo.springboot2.util.AnimeCreator;
+import academy.devdojo.springboot2.util.AnimePostRequestBodyCreator;
+import academy.devdojo.springboot2.wrapper.PageableResponse;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -22,14 +28,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.annotation.DirtiesContext;
 
-import academy.devdojo.springboot2.domain.Anime;
-import academy.devdojo.springboot2.domain.DevDojoUser;
-import academy.devdojo.springboot2.repository.AnimeRepository;
-import academy.devdojo.springboot2.repository.DevDojoUserRepository;
-import academy.devdojo.springboot2.requests.AnimePostRequestBody;
-import academy.devdojo.springboot2.util.AnimeCreator;
-import academy.devdojo.springboot2.util.AnimePostRequestBodyCreator;
-import academy.devdojo.springboot2.wrapper.PageableResponse;
+import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureTestDatabase

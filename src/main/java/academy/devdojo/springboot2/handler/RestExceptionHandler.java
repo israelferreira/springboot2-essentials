@@ -1,9 +1,9 @@
 package academy.devdojo.springboot2.handler;
 
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.stream.Collectors;
-
+import academy.devdojo.springboot2.exception.BadRequestException;
+import academy.devdojo.springboot2.exception.BadRequestExceptionDetails;
+import academy.devdojo.springboot2.exception.ExceptionDetails;
+import academy.devdojo.springboot2.exception.ValidationExceptionDetails;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +15,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import academy.devdojo.springboot2.exception.BadRequestException;
-import academy.devdojo.springboot2.exception.BadRequestExceptionDetails;
-import academy.devdojo.springboot2.exception.ExceptionDetails;
-import academy.devdojo.springboot2.exception.ValidationExceptionDetails;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {

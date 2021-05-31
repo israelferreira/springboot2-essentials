@@ -1,18 +1,16 @@
 package academy.devdojo.springboot2.repository;
 
-import java.util.List;
-import java.util.Optional;
-
-import javax.validation.ConstraintViolationException;
-
+import academy.devdojo.springboot2.domain.Anime;
+import academy.devdojo.springboot2.util.AnimeCreator;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
-import academy.devdojo.springboot2.domain.Anime;
-import academy.devdojo.springboot2.util.AnimeCreator;
+import javax.validation.ConstraintViolationException;
+import java.util.List;
+import java.util.Optional;
 
 @DataJpaTest
 @DisplayName("Tests for Anime Repository")

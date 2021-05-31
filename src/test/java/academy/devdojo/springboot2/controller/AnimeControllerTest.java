@@ -1,8 +1,12 @@
 package academy.devdojo.springboot2.controller;
 
-import java.util.Collections;
-import java.util.List;
-
+import academy.devdojo.springboot2.domain.Anime;
+import academy.devdojo.springboot2.requests.AnimePostRequestBody;
+import academy.devdojo.springboot2.requests.AnimePutRequestBody;
+import academy.devdojo.springboot2.service.AnimeService;
+import academy.devdojo.springboot2.util.AnimeCreator;
+import academy.devdojo.springboot2.util.AnimePostRequestBodyCreator;
+import academy.devdojo.springboot2.util.AnimePutRequestBodyCreator;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -18,13 +22,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import academy.devdojo.springboot2.domain.Anime;
-import academy.devdojo.springboot2.requests.AnimePostRequestBody;
-import academy.devdojo.springboot2.requests.AnimePutRequestBody;
-import academy.devdojo.springboot2.service.AnimeService;
-import academy.devdojo.springboot2.util.AnimeCreator;
-import academy.devdojo.springboot2.util.AnimePostRequestBodyCreator;
-import academy.devdojo.springboot2.util.AnimePutRequestBodyCreator;
+import java.util.Collections;
+import java.util.List;
 
 @ExtendWith(SpringExtension.class)
 class AnimeControllerTest {

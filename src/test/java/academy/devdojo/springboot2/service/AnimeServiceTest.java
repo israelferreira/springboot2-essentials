@@ -1,9 +1,11 @@
 package academy.devdojo.springboot2.service;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
-
+import academy.devdojo.springboot2.domain.Anime;
+import academy.devdojo.springboot2.exception.BadRequestException;
+import academy.devdojo.springboot2.repository.AnimeRepository;
+import academy.devdojo.springboot2.util.AnimeCreator;
+import academy.devdojo.springboot2.util.AnimePostRequestBodyCreator;
+import academy.devdojo.springboot2.util.AnimePutRequestBodyCreator;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -18,12 +20,9 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import academy.devdojo.springboot2.domain.Anime;
-import academy.devdojo.springboot2.exception.BadRequestException;
-import academy.devdojo.springboot2.repository.AnimeRepository;
-import academy.devdojo.springboot2.util.AnimeCreator;
-import academy.devdojo.springboot2.util.AnimePostRequestBodyCreator;
-import academy.devdojo.springboot2.util.AnimePutRequestBodyCreator;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
 
 @ExtendWith(SpringExtension.class)
 class AnimeServiceTest {

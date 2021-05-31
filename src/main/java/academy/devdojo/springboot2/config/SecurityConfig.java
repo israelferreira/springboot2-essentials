@@ -1,5 +1,8 @@
 package academy.devdojo.springboot2.config;
 
+import academy.devdojo.springboot2.service.DevDojoUserDetailsService;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -8,18 +11,17 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import academy.devdojo.springboot2.service.DevDojoUserDetailsService;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
-
-@Log4j2
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-@RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-	
+
+	private static final Logger log = LogManager.getLogger(SecurityConfig.class);
 	private final DevDojoUserDetailsService devDojoUserDetailsService;
-	
+
+	public SecurityConfig(DevDojoUserDetailsService devDojoUserDetailsService) {
+		this.devDojoUserDetailsService = devDojoUserDetailsService;
+	}
+
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable()

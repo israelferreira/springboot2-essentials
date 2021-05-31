@@ -1,20 +1,14 @@
 package academy.devdojo.springboot2.wrapper;
 
-import java.util.List;
-
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
-
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.util.List;
 
-@Getter
-@Setter
 public class PageableResponse<T> extends PageImpl<T> {
 	
 	private static final long serialVersionUID = 1L;
@@ -42,4 +36,36 @@ public class PageableResponse<T> extends PageImpl<T> {
 		this.numberOfElements = numberOfElements;
 
 	}
+
+    public boolean isFirst() {
+        return this.first;
+    }
+
+    public boolean isLast() {
+        return this.last;
+    }
+
+    public int getTotalPages() {
+        return this.totalPages;
+    }
+
+    public int getNumberOfElements() {
+        return this.numberOfElements;
+    }
+
+    public void setFirst(boolean first) {
+        this.first = first;
+    }
+
+    public void setLast(boolean last) {
+        this.last = last;
+    }
+
+    public void setTotalPages(int totalPages) {
+        this.totalPages = totalPages;
+    }
+
+    public void setNumberOfElements(int numberOfElements) {
+        this.numberOfElements = numberOfElements;
+    }
 }
